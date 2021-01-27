@@ -1,0 +1,32 @@
+<div>
+    <div class="alert alert-info">@Title</div>
+    <div class="alert alert-success">
+        @if (ChildContent == null)
+        {
+            <span>Default Render Fragment</span>
+        }
+        <span>@ChildContent </span>
+    </div>
+    
+    <div class="alert alert-danger">
+        @AnotherChildContent
+    </div>
+    
+    <button class="btn btn-danger" @onclick="OnClickBtnMethod">Click me!</button>
+</div>
+
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    
+    [Parameter]
+    public RenderFragment AnotherChildContent { get; set; }
+    
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickBtnMethod { get; set; }
+}

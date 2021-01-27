@@ -69,3 +69,7 @@
 /Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/Lifecycle.razor.g.cs
 /Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/LearnBlazorComponents/LifecycleComponent.razor.g.cs
 /Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/Lifecycle.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/LearnBlazorComponents/ChildComponent.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/ParentComponent.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/LearnBlazorComponents/ChildComponent.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/ParentComponent.razor.g.cs

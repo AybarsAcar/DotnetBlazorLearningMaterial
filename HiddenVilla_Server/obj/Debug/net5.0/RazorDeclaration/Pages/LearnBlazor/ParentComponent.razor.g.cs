@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace HiddenVilla_Server.Shared
+namespace HiddenVilla_Server.Pages.LearnBlazor
 {
     #line hidden
     using System;
@@ -96,7 +96,8 @@ using HiddenVilla_Server.Model;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/ParentComponent")]
+    public partial class ParentComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,17 +105,14 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 48 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Shared/NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
+#line 17 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/ParentComponent.razor"
+ 
+    private string messageText = "";
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private void ShowMessage(MouseEventArgs e)
     {
-        collapseNavMenu = !collapseNavMenu;
+        messageText = "Blazing text from parent";
     }
-
 
 #line default
 #line hidden

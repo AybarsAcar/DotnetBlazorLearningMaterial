@@ -114,7 +114,7 @@ using HiddenVilla_Server.Model;
 
     protected async Task AmenitySelectionChanged(MouseEventArgs e, string name)
     {
-        await OnAmenitySelection.InvokeAsync((string) name);
+        await OnAmenitySelection.InvokeAsync(name);
     }
 
 #line default
