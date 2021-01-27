@@ -105,8 +105,11 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
+#line 32 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
  
+    public int SelectedRooms { get; set; } = 0;
+    public string SelectedAmenity { get; set; }
+
     List<BlazorRoom> RoomsList = new List<BlazorRoom>();
     List<HotelAmenities> AmenitiesList = new List<HotelAmenities>();
 
@@ -114,8 +117,28 @@ using HiddenVilla_Server.Model;
 #line hidden
 #nullable disable
 #nullable restore
-#line 34 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
+#line 41 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
  
+    protected void AmenitySelectionChanged(string amenityName)
+    {
+        SelectedAmenity = amenityName;
+    }
+
+    /**
+     * method to trigger the event whether a room has been selected or not
+     */
+    protected void SelectedRoomsCounterChanged(bool isSelected)
+    {
+        if (isSelected)
+        {
+            SelectedRooms++;
+        }
+        else
+        {
+            SelectedRooms--;
+        }
+    }
+
     protected override void OnInitialized()
     {
         base.OnInitialized();

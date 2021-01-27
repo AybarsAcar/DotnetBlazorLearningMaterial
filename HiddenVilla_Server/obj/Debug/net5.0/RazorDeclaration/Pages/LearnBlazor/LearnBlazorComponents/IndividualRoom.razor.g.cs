@@ -104,10 +104,21 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/IndividualRoom.razor"
+#line 28 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/IndividualRoom.razor"
  
     [Parameter]
     public BlazorRoom Room { get; set; }
+    
+    [Parameter]
+    public EventCallback<bool> OnRoomCheckBoxSelection { get; set; }
+       
+    /**
+     * this method will call the method on the parent component
+     */
+    protected async Task SelectedRoomsCheckBoxChanged(ChangeEventArgs e)
+    {
+        await OnRoomCheckBoxSelection.InvokeAsync((bool) e.Value);
+    }
 
 #line default
 #line hidden

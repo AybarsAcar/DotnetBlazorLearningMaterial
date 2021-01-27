@@ -1,6 +1,6 @@
-<div class="bg-light border p-2 col-5">
+<div class="bg-light border p-2 col-5" @onclick="(args) => AmenitySelectionChanged(args, Amenities.Name)">
     <h4 class="text-secondary">Amenities - @Amenities.Id</h4>
- 
+
     @Amenities.Name <br/>
     @Amenities.Description <br/>
 </div>
@@ -10,4 +10,12 @@
 {
     [Parameter]
     public HotelAmenities Amenities { get; set; }
+
+    [Parameter]
+    public EventCallback<string> OnAmenitySelection { get; set; }
+
+    protected async Task AmenitySelectionChanged(MouseEventArgs e, string name)
+    {
+        await OnAmenitySelection.InvokeAsync(name);
+    }
 }

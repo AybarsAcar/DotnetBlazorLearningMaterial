@@ -1,5 +1,8 @@
 <div class="bg-light border p-2 col-5">
     <h4 class="text-secondary">Room - @Room.Id</h4>
+    
+    <input type="checkbox" @onchange="SelectedRoomsCheckBoxChanged" />
+    
     @Room.RoomName<br/>
     $@Room.Price<br/>
     <input
@@ -25,4 +28,15 @@
 {
     [Parameter]
     public BlazorRoom Room { get; set; }
+    
+    [Parameter]
+    public EventCallback<bool> OnRoomCheckBoxSelection { get; set; }
+       
+    /**
+     * this method will call the method on the parent component
+     */
+    protected async Task SelectedRoomsCheckBoxChanged(ChangeEventArgs e)
+    {
+        await OnRoomCheckBoxSelection.InvokeAsync((bool) e.Value);
+    }
 }

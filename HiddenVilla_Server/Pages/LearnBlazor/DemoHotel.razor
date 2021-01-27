@@ -6,10 +6,11 @@
     <div class="row container">
         <div class="col-12">
             <h4 class="text-info">Hotel Rooms</h4>
+            <span>Rooms Selected - @SelectedRooms</span>
         </div>
         @foreach (var room in RoomsList)
         {
-            <IndividualRoom Room="room"/>
+            <IndividualRoom OnRoomCheckBoxSelection="SelectedRoomsCounterChanged" Room="room"/>
         }
 
         <div class="col-12 mt-4">
@@ -17,21 +18,47 @@
         </div>
         @foreach (var amenities in AmenitiesList)
         {
-            <IndividualAmenities Amenities="amenities"/>
+            <IndividualAmenities OnAmenitySelection="AmenitySelectionChanged" Amenities="amenities"/>
         }
 
+    </div>
+    <div class="col-12">
+        <p class="text-secondary">Selected Amenity: @SelectedAmenity</p>
     </div>
 </div>
 
 
 @code
 {
+    public int SelectedRooms { get; set; } = 0;
+    public string SelectedAmenity { get; set; }
+
     List<BlazorRoom> RoomsList = new List<BlazorRoom>();
     List<HotelAmenities> AmenitiesList = new List<HotelAmenities>();
 }
 
 @code
 {
+    protected void AmenitySelectionChanged(string amenityName)
+    {
+        SelectedAmenity = amenityName;
+    }
+
+    /**
+     * method to trigger the event whether a room has been selected or not
+     */
+    protected void SelectedRoomsCounterChanged(bool isSelected)
+    {
+        if (isSelected)
+        {
+            SelectedRooms++;
+        }
+        else
+        {
+            SelectedRooms--;
+        }
+    }
+
     protected override void OnInitialized()
     {
         base.OnInitialized();

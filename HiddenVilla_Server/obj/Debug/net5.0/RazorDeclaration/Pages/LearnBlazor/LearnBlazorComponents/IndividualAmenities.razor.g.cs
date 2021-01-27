@@ -109,6 +109,14 @@ using HiddenVilla_Server.Model;
     [Parameter]
     public HotelAmenities Amenities { get; set; }
 
+    [Parameter]
+    public EventCallback<string> OnAmenitySelection { get; set; }
+
+    protected async Task AmenitySelectionChanged(MouseEventArgs e, string name)
+    {
+        await OnAmenitySelection.InvokeAsync((string) name);
+    }
+
 #line default
 #line hidden
 #nullable disable
