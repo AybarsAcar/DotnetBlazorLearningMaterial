@@ -1,0 +1,112 @@
+@page "/demoHotel"
+
+<h3>We will display hotel rooms and amenities here!</h3>
+<div class="border p-2 mt-2" style="background-color: azure">
+    <h2 class="text-info">Room List</h2>
+    <div class="row container">
+        <div class="col-12">
+            <h4 class="text-info">Hotel Rooms</h4>
+        </div>
+        @foreach (var room in RoomsList)
+        {
+            <IndividualRoom Room="room"/>
+        }
+
+        <div class="col-12 mt-4">
+            <h4 class="text-info">Hotel Amenities</h4>
+        </div>
+        @foreach (var amenities in AmenitiesList)
+        {
+            <IndividualAmenities Amenities="amenities"/>
+        }
+
+    </div>
+</div>
+
+
+@code
+{
+    List<BlazorRoom> RoomsList = new List<BlazorRoom>();
+    List<HotelAmenities> AmenitiesList = new List<HotelAmenities>();
+}
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        RoomsList.Add(new BlazorRoom()
+        {
+            Id = 1,
+            Price = 499,
+            IsActive = false,
+            RoomName = "Villa Suite",
+            RoomProps = new List<BlazorRoomProp>()
+            {
+                new Model.BlazorRoomProp
+                {
+                    Id = 1, Name = "Sq Ft", Value = "100"
+                },
+                new Model.BlazorRoomProp
+                {
+                    Id = 2, Name = "Occupancy", Value = "3"
+                }
+            }
+        });
+        RoomsList.Add(new BlazorRoom()
+        {
+            Id = 2,
+            Price = 399,
+            IsActive = false,
+            RoomName = "Villa Suite One Bed Room",
+            RoomProps = new List<BlazorRoomProp>()
+            {
+                new Model.BlazorRoomProp
+                {
+                    Id = 1, Name = "Sq Ft", Value = "100"
+                },
+                new Model.BlazorRoomProp
+                {
+                    Id = 2, Name = "Occupancy", Value = "3"
+                }
+            }
+        });
+        RoomsList.Add(new BlazorRoom()
+        {
+            Id = 3,
+            Price = 699,
+            IsActive = false,
+            RoomName = "Villa Suite Two Bed Room",
+            RoomProps = new List<BlazorRoomProp>()
+            {
+                new Model.BlazorRoomProp
+                {
+                    Id = 1, Name = "Sq Ft", Value = "100"
+                },
+                new Model.BlazorRoomProp
+                {
+                    Id = 2, Name = "Occupancy", Value = "3"
+                }
+            }
+        });
+
+        AmenitiesList.Add(new HotelAmenities()
+        {
+            Id = 101,
+            Name = "Gym",
+            Description = "Hotel Gym open 24/7"
+        });
+        AmenitiesList.Add(new HotelAmenities()
+        {
+            Id = 102,
+            Name = "Swimming Pool",
+            Description = "Swimming pool open all day"
+        });
+        AmenitiesList.Add(new HotelAmenities()
+        {
+            Id = 103,
+            Name = "Breakfast",
+            Description = "Free breakfast for our customers"
+        });
+    }
+}
