@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Common/Common.csproj",
+      "projectUniqueName": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Common/Common.csproj",
       "projectName": "Common",
-      "projectPath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Common/Common.csproj",
+      "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Common/Common.csproj",
       "packagesPath": "/Users/aybarsacar/.nuget/packages/",
-      "outputPath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Common/obj/",
+      "outputPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Common/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aybarsacar/.nuget/NuGet/NuGet.Config"

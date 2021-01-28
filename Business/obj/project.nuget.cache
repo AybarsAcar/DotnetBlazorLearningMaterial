@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "25KmIhbjrkHj8irjNskY6AJm3rQIyLjsXq0c4AEcMmoxyPhNmo2V4ylTikKQ7UW5Lkllv6o/fZ7befRatWeToA==",
+  "dgSpecHash": "UBkpUpQzSuwCAjosrxZpMUYpKT2SlFVW5+dJrITHesAaTsZZXHWGtxmXvPlrHLzGPka4cqy4uY8nrBRXsm6+6w==",
   "success": true,
-  "projectFilePath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Business/Business.csproj",
+  "projectFilePath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

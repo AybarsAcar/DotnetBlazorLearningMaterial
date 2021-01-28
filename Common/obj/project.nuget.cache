@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n4YGeYuGaPi2NUyvAlA2gNnOQ37uv7BpE7WKFe8kixdDoU/qj+br9KqizcbsXo5AeHSOfmdsXbxEIDF0KyOVNQ==",
+  "dgSpecHash": "E6P19cK/HepQykjX+qJaWE7/AvFayazeDEW3I9gRL4sReoYiSMqYaLXfrYd7olaVYOVQYijhCWoqUHzP3dz6Ug==",
   "success": true,
-  "projectFilePath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Common/Common.csproj",
+  "projectFilePath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Common/Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

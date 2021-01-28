@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aybarsacar/Desktop/cs/HiddenVilla/Business/Business.csproj": {}
+    "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj": {}
   },
   "projects": {
-    "/Users/aybarsacar/Desktop/cs/HiddenVilla/Business/Business.csproj": {
+    "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Business/Business.csproj",
+        "projectUniqueName": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj",
         "projectName": "Business",
-        "projectPath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Business/Business.csproj",
+        "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj",
         "packagesPath": "/Users/aybarsacar/.nuget/packages/",
-        "outputPath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/Business/obj/",
+        "outputPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aybarsacar/.nuget/NuGet/NuGet.Config"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aybarsacar/Desktop/cs/HiddenVilla/DataAccess/DataAccess.csproj": {}
+    "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj": {}
   },
   "projects": {
-    "/Users/aybarsacar/Desktop/cs/HiddenVilla/DataAccess/DataAccess.csproj": {
+    "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aybarsacar/Desktop/cs/HiddenVilla/DataAccess/DataAccess.csproj",
+        "projectUniqueName": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/DataAccess/DataAccess.csproj",
+        "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj",
         "packagesPath": "/Users/aybarsacar/.nuget/packages/",
-        "outputPath": "/Users/aybarsacar/Desktop/cs/HiddenVilla/DataAccess/obj/",
+        "outputPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aybarsacar/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
