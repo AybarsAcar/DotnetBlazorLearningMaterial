@@ -96,7 +96,7 @@ using HiddenVilla_Server.Model;
 #line default
 #line hidden
 #nullable disable
-    public partial class ChildComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class AnotherChildComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,19 +104,19 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/ChildComponent.razor"
+#line 8 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/AnotherChildComponent.razor"
  
-    [Parameter]
-    public string Title { get; set; }
+    // [Parameter]
+    // public string Placeholder { get; set; }
+    //
+    // [Parameter]
+    // public string Required { get; set; } = "required";
+    //
+    // [Parameter]
+    // public string MaxLength { get; set; } = "10";
 
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
-
-    [Parameter]
-    public RenderFragment AnotherChildContent { get; set; }
-
-    [Parameter]
-    public EventCallback<MouseEventArgs> OnClickBtnMethod { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();
 
 #line default
 #line hidden

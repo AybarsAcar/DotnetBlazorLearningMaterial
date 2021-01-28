@@ -7,12 +7,14 @@
         }
         <span>@ChildContent </span>
     </div>
-    
+
     <div class="alert alert-danger">
         @AnotherChildContent
     </div>
-    
+
     <button class="btn btn-danger" @onclick="OnClickBtnMethod">Click me!</button>
+
+    <GrandChildComponent></GrandChildComponent>
 </div>
 
 
@@ -23,10 +25,10 @@
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
-    
+
     [Parameter]
     public RenderFragment AnotherChildContent { get; set; }
-    
+
     [Parameter]
     public EventCallback<MouseEventArgs> OnClickBtnMethod { get; set; }
 }

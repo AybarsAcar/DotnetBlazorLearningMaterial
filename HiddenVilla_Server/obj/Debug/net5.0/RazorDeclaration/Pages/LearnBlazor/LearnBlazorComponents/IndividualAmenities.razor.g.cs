@@ -104,13 +104,19 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 10 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/IndividualAmenities.razor"
+#line 11 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/IndividualAmenities.razor"
  
     [Parameter]
     public HotelAmenities Amenities { get; set; }
 
     [Parameter]
     public EventCallback<string> OnAmenitySelection { get; set; }
+    
+    [Parameter]
+    public RenderFragment Child1 { get; set; }
+    
+    [Parameter]
+    public RenderFragment Child2 { get; set; }
 
     protected async Task AmenitySelectionChanged(MouseEventArgs e, string name)
     {

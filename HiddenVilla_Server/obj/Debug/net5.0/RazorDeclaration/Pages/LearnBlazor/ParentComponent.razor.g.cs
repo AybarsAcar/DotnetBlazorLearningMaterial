@@ -105,8 +105,12 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/ParentComponent.razor"
+#line 25 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/ParentComponent.razor"
  
+    private string MessageForGrandChild = "This is a message from your grand parent";
+
+    public int LuckNumber { get; set; } = 7;
+    
     private string messageText = "";
 
     private void ShowMessage(MouseEventArgs e)

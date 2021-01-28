@@ -18,7 +18,10 @@
         </div>
         @foreach (var amenities in AmenitiesList)
         {
-            <IndividualAmenities OnAmenitySelection="AmenitySelectionChanged" Amenities="amenities"/>
+            <IndividualAmenities OnAmenitySelection="AmenitySelectionChanged" Amenities="amenities">
+                <Child1>#1</Child1>
+                <Child2>#2</Child2>
+            </IndividualAmenities>
         }
 
     </div>

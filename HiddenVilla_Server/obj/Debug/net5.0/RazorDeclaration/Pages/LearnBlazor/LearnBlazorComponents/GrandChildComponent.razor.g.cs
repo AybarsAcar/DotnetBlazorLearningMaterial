@@ -96,7 +96,7 @@ using HiddenVilla_Server.Model;
 #line default
 #line hidden
 #nullable disable
-    public partial class ChildComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class GrandChildComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,19 +104,13 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/ChildComponent.razor"
+#line 13 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/GrandChildComponent.razor"
  
-    [Parameter]
-    public string Title { get; set; }
+    [CascadingParameter]
+    public string MessageForGrandChild { get; set; }
 
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
-
-    [Parameter]
-    public RenderFragment AnotherChildContent { get; set; }
-
-    [Parameter]
-    public EventCallback<MouseEventArgs> OnClickBtnMethod { get; set; }
+    [CascadingParameter]
+    public int LuckyNumberFromParent { get; set; }
 
 #line default
 #line hidden

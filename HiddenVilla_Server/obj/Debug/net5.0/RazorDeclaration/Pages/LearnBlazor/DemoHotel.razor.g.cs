@@ -105,7 +105,7 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 32 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
+#line 35 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
  
     public int SelectedRooms { get; set; } = 0;
     public string SelectedAmenity { get; set; }
@@ -117,7 +117,7 @@ using HiddenVilla_Server.Model;
 #line hidden
 #nullable disable
 #nullable restore
-#line 41 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
+#line 44 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/DemoHotel.razor"
  
     protected void AmenitySelectionChanged(string amenityName)
     {
