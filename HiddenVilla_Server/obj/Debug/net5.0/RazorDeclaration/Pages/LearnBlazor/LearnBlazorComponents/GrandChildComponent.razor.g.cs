@@ -106,10 +106,10 @@ using HiddenVilla_Server.Model;
 #nullable restore
 #line 13 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/GrandChildComponent.razor"
  
-    [CascadingParameter]
+    [CascadingParameter(Name = "MessageFromGrandParent")]
     public string MessageForGrandChild { get; set; }
 
-    [CascadingParameter]
+    [CascadingParameter(Name = "LuckNumberFromGrandParent")]
     public int LuckyNumberFromParent { get; set; }
 
 #line default

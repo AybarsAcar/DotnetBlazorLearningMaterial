@@ -77,3 +77,7 @@
 /Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/LearnBlazorComponents/AnotherChildComponent.razor.g.cs
 /Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/LearnBlazorComponents/GrandChildComponent.razor.g.cs
 /Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/LearnBlazorComponents/GrandChildComponent.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/LearnRouting.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/LearnRouting.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/LearnAdvancedRouting.razor.g.cs
+/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/LearnAdvancedRouting.razor.g.cs

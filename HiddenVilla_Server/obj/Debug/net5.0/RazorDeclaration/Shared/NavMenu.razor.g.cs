@@ -104,7 +104,7 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 48 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Shared/NavMenu.razor"
+#line 53 "/Users/aybarsacar/Desktop/cs/HiddenVilla/HiddenVilla_Server/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
