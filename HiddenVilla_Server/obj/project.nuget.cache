@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Kkw2LNShNq0JsCe7pzitNoTesykau0KU0F04/6jsrNR5Osz2Wz9FSr2lOKpxNbRHd/g4e4pnkUBWUKpPIovk7Q==",
+  "dgSpecHash": "BOdl1HdK3JxfiWMSd/GRLD2dTRhmOe6fODZXMQbGCtMbd4kYpTSVZB7E2L2xXlBWe/Fj21uoQu+6ovNYoHDP9Q==",
   "success": true,
   "projectFilePath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/HiddenVilla_Server.csproj",
   "expectedPackageFiles": [
+    "/Users/aybarsacar/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/aybarsacar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.0/automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/microsoft.data.sqlite.core/5.0.2/microsoft.data.sqlite.core.5.0.2.nupkg.sha512",
@@ -32,7 +34,8 @@
     "/Users/aybarsacar/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "/Users/aybarsacar/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+    "/Users/aybarsacar/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/aybarsacar/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

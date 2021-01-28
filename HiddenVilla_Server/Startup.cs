@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -30,6 +31,8 @@ namespace HiddenVilla_Server
       {
         opt.UseSqlite(_config.GetConnectionString("DefaultConnection"));
       });
+
+      services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
       
       services.AddRazorPages();
       services.AddServerSideBlazor();

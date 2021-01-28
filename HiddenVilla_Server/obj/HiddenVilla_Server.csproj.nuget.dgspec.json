@@ -4,6 +4,71 @@
     "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/HiddenVilla_Server.csproj": {}
   },
   "projects": {
+    "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj",
+        "projectName": "Business",
+        "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj",
+        "packagesPath": "/Users/aybarsacar/.nuget/packages/",
+        "outputPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/aybarsacar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj": {
+                "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj"
+              },
+              "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Models/Models.csproj": {
+                "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Models/Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -84,6 +149,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj": {
+                "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Business/Business.csproj"
+              },
               "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj": {
                 "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/DataAccess/DataAccess.csproj"
               }
@@ -100,6 +168,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -125,6 +201,58 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Models/Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Models/Models.csproj",
+        "projectName": "Models",
+        "projectPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Models/Models.csproj",
+        "packagesPath": "/Users/aybarsacar/.nuget/packages/",
+        "outputPath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/aybarsacar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
