@@ -1,5 +1,8 @@
 @page "/hotel-room/create"
 @using Models
+@using Business.Repository.IRepository
+@inject IHotelRoomRepository _HotelRoomRepository
+@inject NavigationManager _NavigationManager
 
 <div class="row mt-2 mb-5">
     <h3 class="card-title text-info mb-3 ml-3">@Title Hotel Room</h3>
@@ -62,6 +65,18 @@
 
     private async Task HandleHotelRoomSubmit()
     {
-        HotelRoomModel.Details = "Button Clicked";
+        // we can access the variables through the model
+        var roomDetailByName = await _HotelRoomRepository.IsRoomUnique(HotelRoomModel.Name);
+
+        if (roomDetailByName != null)
+        {
+            // room with that name already exists
+            return;
+        }
+
+        var createdResult = await _HotelRoomRepository.CreateHotelRoom(HotelRoomModel);
+        
+        // Navigate back to the index page
+        _NavigationManager.NavigateTo("hotel-room");
     }
 }

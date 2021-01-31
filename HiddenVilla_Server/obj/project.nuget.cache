@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BOdl1HdK3JxfiWMSd/GRLD2dTRhmOe6fODZXMQbGCtMbd4kYpTSVZB7E2L2xXlBWe/Fj21uoQu+6ovNYoHDP9Q==",
+  "dgSpecHash": "qmg392Cffus9bQtNu7cFA3NUN75axLZFgNVORhvwWFFkX+XaVhMvrhqF1q0fR/fB4oRTBrEX5D1z2Om3313G7g==",
   "success": true,
   "projectFilePath": "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/HiddenVilla_Server.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,8 @@
     "/Users/aybarsacar/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "/Users/aybarsacar/.nuget/packages/npgsql/5.0.2/npgsql.5.0.2.nupkg.sha512",
+    "/Users/aybarsacar/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.2/npgsql.entityframeworkcore.postgresql.5.0.2.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.4/sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.4/sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
@@ -35,7 +37,8 @@
     "/Users/aybarsacar/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "/Users/aybarsacar/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
-    "/Users/aybarsacar/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512"
+    "/Users/aybarsacar/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
+    "/Users/aybarsacar/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

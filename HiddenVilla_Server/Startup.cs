@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Business.Mapper;
+using Business.Repository;
+using Business.Repository.IRepository;
 using DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -33,6 +36,15 @@ namespace HiddenVilla_Server
       });
 
       services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+      // var mapperConfig = new MapperConfiguration(mc =>
+      // {
+      //   mc.AddProfile(new MappingProfile());
+      // });
+      // IMapper mapper = mapperConfig.CreateMapper();
+      // services.AddSingleton(mapper);
+
+      services.AddScoped<IHotelRoomRepository, HotelRoomRepository>();
       
       services.AddRazorPages();
       services.AddServerSideBlazor();

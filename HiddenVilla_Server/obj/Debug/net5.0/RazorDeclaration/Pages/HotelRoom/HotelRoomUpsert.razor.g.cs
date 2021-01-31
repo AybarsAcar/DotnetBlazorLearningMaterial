@@ -103,6 +103,13 @@ using Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
+using Business.Repository.IRepository;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/hotel-room/create")]
     public partial class HotelRoomUpsert : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,19 +119,33 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 59 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
+#line 62 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
  
     private HotelRoomDTO HotelRoomModel { get; set; } = new HotelRoomDTO();
     private string Title { get; set; } = "Create";
 
     private async Task HandleHotelRoomSubmit()
     {
-        HotelRoomModel.Details = "Button Clicked";
+        // we can access the variables through the model
+        var roomDetailByName = await _HotelRoomRepository.IsRoomUnique(HotelRoomModel.Name);
+
+        if (roomDetailByName != null)
+        {
+            // room with that name already exists
+            return;
+        }
+
+        var createdResult = await _HotelRoomRepository.CreateHotelRoom(HotelRoomModel);
+        
+        // Navigate back to the index page
+        _NavigationManager.NavigateTo("hotel-rooms");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHotelRoomRepository _HotelRoomRepository { get; set; }
     }
 }
 #pragma warning restore 1591
