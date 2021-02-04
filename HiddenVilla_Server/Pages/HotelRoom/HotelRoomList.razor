@@ -1,4 +1,7 @@
 @page "/hotel-room"
+@using Models
+@using Business.Repository.IRepository
+@inject IHotelRoomRepository _HotelRoomRepository
 
 <div class="row mt-4">
     <div class="col-8">
@@ -9,7 +12,51 @@
     </div>
 </div>
 
-@code 
+<div class="row mt-4">
+    <div class="col-12">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Occupancy</th>
+                <th>Rate</th>
+                <th>Sqft</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @if (HotelRooms.Any())
+            {
+                foreach (var room in HotelRooms)
+                {
+                    <tr>
+                        <td>@room.Name</td>
+                        <td>@room.Occupancy</td>
+                        <td>@room.RegularRate AUD</td>
+                        <td>@room.SqFt</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5">No records found</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code
 {
-    
+    private IEnumerable<HotelRoomDTO> HotelRooms { get; set; } = new List<HotelRoomDTO>();
+
+    /**
+     * initialise the list
+     */
+    protected override async Task OnInitializedAsync()
+    {
+        HotelRooms = await _HotelRoomRepository.GetAllHotelRooms();
+    }
 }

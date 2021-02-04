@@ -96,6 +96,13 @@ using HiddenVilla_Server.Model;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/_Imports.razor"
+using HiddenVilla_Server.Helper;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/ParentComponent")]
     public partial class ParentComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,8 +112,10 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/LearnBlazor/ParentComponent.razor"
+#line 33 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/LearnBlazor/ParentComponent.razor"
  
+    private ChildComponent childComp;
+    
     private string MessageForGrandChild = "This is a message from your grand parent";
 
     public int LuckNumber { get; set; } = 7;

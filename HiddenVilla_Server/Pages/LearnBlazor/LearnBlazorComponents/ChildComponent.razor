@@ -1,3 +1,5 @@
+@inject IJSRuntime JsRuntime;
+
 <div>
     <div class="alert alert-info">@Title</div>
     <div class="alert alert-success">
@@ -31,4 +33,9 @@
 
     [Parameter]
     public EventCallback<MouseEventArgs> OnClickBtnMethod { get; set; }
+
+    public async Task ShowToastrSuccess()
+    {
+        await JsRuntime.ToastrSuccess("Success on the child component, called from the parent component");
+    }
 }

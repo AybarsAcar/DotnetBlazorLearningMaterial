@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace HiddenVilla_Server
+namespace HiddenVilla_Server.Pages.LearnBlazor
 {
     #line hidden
     using System;
@@ -103,13 +103,50 @@ using HiddenVilla_Server.Helper;
 #line default
 #line hidden
 #nullable disable
-    public partial class _Imports : System.Object
+    [Microsoft.AspNetCore.Components.RouteAttribute("/BlazorJs")]
+    public partial class BlazorJs : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
-        protected void Execute()
+        protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 30 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/LearnBlazor/BlazorJs.razor"
+ 
+    public string ConfirmMessage { get; set; } = "Are you sure you want to click?";
+    public bool ConfirmResult { get; set; }
+
+    private async Task TestConfirmBox(string message)
+    {
+        // display the confirm message in a js confirm box
+        ConfirmResult = await JsRuntime.InvokeAsync<bool>("confirm", message);
+    }
+
+    private async Task TestSuccess()
+    {
+        await JsRuntime.ToastrSuccess("Succeeded");
+    }
+    
+    private async Task TestFailure()
+    {
+        await JsRuntime.ToastrError("Failed");
+    }
+    
+    private async Task SweetSuccess()
+    {
+        await JsRuntime.SweetAlertSuccess("Success!");
+    }
+    
+    private async Task SweetFailure()
+    {
+        await JsRuntime.SweetAlertError("Error :(");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -96,6 +96,13 @@ using HiddenVilla_Server.Model;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/_Imports.razor"
+using HiddenVilla_Server.Helper;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ChildComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,7 +111,7 @@ using HiddenVilla_Server.Model;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/ChildComponent.razor"
+#line 24 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/LearnBlazor/LearnBlazorComponents/ChildComponent.razor"
  
     [Parameter]
     public string Title { get; set; }
@@ -118,9 +125,15 @@ using HiddenVilla_Server.Model;
     [Parameter]
     public EventCallback<MouseEventArgs> OnClickBtnMethod { get; set; }
 
+    public async Task ShowToastrSuccess()
+    {
+        await JsRuntime.ToastrSuccess("Success on the child component, called from the parent component");
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
     }
 }
 #pragma warning restore 1591

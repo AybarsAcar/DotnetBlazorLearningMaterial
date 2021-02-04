@@ -96,6 +96,27 @@ using HiddenVilla_Server.Model;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/_Imports.razor"
+using HiddenVilla_Server.Helper;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomList.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomList.razor"
+using Business.Repository.IRepository;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/hotel-room")]
     public partial class HotelRoomList : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -104,6 +125,23 @@ using HiddenVilla_Server.Model;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 52 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomList.razor"
+ 
+    private IEnumerable<HotelRoomDTO> HotelRooms { get; set; } = new List<HotelRoomDTO>();
+
+    /**
+     * initialise the list
+     */
+    protected override async Task OnInitializedAsync()
+    {
+        HotelRooms = await _HotelRoomRepository.GetAllHotelRooms();
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHotelRoomRepository _HotelRoomRepository { get; set; }
     }
 }
 #pragma warning restore 1591

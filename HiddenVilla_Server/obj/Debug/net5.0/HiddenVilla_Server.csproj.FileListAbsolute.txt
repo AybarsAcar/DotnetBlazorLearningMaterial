@@ -206,3 +206,5 @@
 /Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/obj/Debug/net5.0/HiddenVilla_Server.genruntimeconfig.cache
 /Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/bin/Debug/net5.0/Npgsql.dll
 /Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/obj/Debug/net5.0/RazorDeclaration/Pages/LearnBlazor/BlazorJs.razor.g.cs
+/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/obj/Debug/net5.0/Razor/Pages/LearnBlazor/BlazorJs.razor.g.cs
