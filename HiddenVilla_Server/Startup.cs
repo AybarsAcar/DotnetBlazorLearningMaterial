@@ -15,6 +15,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using HiddenVilla_Server.Data;
+using HiddenVilla_Server.Service;
+using HiddenVilla_Server.Service.IService;
 using Microsoft.EntityFrameworkCore;
 
 namespace HiddenVilla_Server
@@ -37,14 +39,10 @@ namespace HiddenVilla_Server
 
       services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-      // var mapperConfig = new MapperConfiguration(mc =>
-      // {
-      //   mc.AddProfile(new MappingProfile());
-      // });
-      // IMapper mapper = mapperConfig.CreateMapper();
-      // services.AddSingleton(mapper);
-
       services.AddScoped<IHotelRoomRepository, HotelRoomRepository>();
+      services.AddScoped<IHotelRoomImageRepository, HotelRoomImageRepository>();
+
+      services.AddScoped<IFileUpload, FileUpload>();
       
       services.AddRazorPages();
       services.AddServerSideBlazor();
