@@ -42,7 +42,7 @@ namespace Business.Repository
         {
           // valid 
           var roomDetails = await _db.HotelRooms.FindAsync(roomId);
-          
+
           var room = _mapper.Map<HotelRoomDTO, HotelRoom>(hotelRoomDto, roomDetails);
 
           room.UpdatedBy = "";
@@ -97,13 +97,24 @@ namespace Business.Repository
     /**
      * if unique returns null else returns the room object
      */
-    public async Task<HotelRoomDTO> IsRoomUnique(string name)
+    public async Task<HotelRoomDTO> IsRoomUnique(string name, int roomId = 0)
     {
       try
       {
-        HotelRoom hotelRoom = await _db.HotelRooms.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower());
-        HotelRoomDTO hotelRoomDto = _mapper.Map<HotelRoom, HotelRoomDTO>(hotelRoom);
-        return hotelRoomDto;
+        if (roomId == 0)
+        {
+          HotelRoom hotelRoom = await _db.HotelRooms.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower());
+          HotelRoomDTO hotelRoomDto = _mapper.Map<HotelRoom, HotelRoomDTO>(hotelRoom);
+          return hotelRoomDto;
+        }
+        else
+        {
+          // editing
+          HotelRoom hotelRoom = await _db.HotelRooms.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower()
+                                                                              && x.Id != roomId);
+          HotelRoomDTO hotelRoomDto = _mapper.Map<HotelRoom, HotelRoomDTO>(hotelRoom);
+          return hotelRoomDto;
+        }
       }
       catch (Exception e)
       {

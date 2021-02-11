@@ -34,6 +34,9 @@
                         <td>@room.Occupancy</td>
                         <td>@room.RegularRate AUD</td>
                         <td>@room.SqFt</td>
+                        <td>
+                            <NavLink class="btn btn-warning" href="@($"hotel-room/edit/{room.Id}")">Edit</NavLink>
+                        </td>
                     </tr>
                 }
             }

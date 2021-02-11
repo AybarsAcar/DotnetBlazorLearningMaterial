@@ -104,20 +104,21 @@ using HiddenVilla_Server.Helper;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
+#line 3 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
 using Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
+#line 4 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
 using Business.Repository.IRepository;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/hotel-room/create")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/hotel-room/edit/{Id:int}")]
     public partial class HotelRoomUpsert : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -126,31 +127,71 @@ using Business.Repository.IRepository;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 62 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
+#line 64 "/Users/aybarsacar/Desktop/cs/DotnetBlazorLearningMaterial/HiddenVilla_Server/Pages/HotelRoom/HotelRoomUpsert.razor"
  
-    private HotelRoomDTO HotelRoomModel { get; set; } = new HotelRoomDTO();
-    private string Title { get; set; } = "Create";
+    [Parameter]
+    public int? Id { get; set; }
+
+    private HotelRoomDTO HotelRoomModel { get; set; }
+    private string Title { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id != null)
+        {
+            Title = "Update";
+
+    // retrieve the hotel room details
+            HotelRoomModel = await _HotelRoomRepository.GetHotelRoom(Id.Value);
+        }
+        else
+        {
+            Title = "Create";
+
+    // create
+            HotelRoomModel = new HotelRoomDTO();
+        }
+    }
 
     private async Task HandleHotelRoomSubmit()
     {
-        // we can access the variables through the model
-        var roomDetailByName = await _HotelRoomRepository.IsRoomUnique(HotelRoomModel.Name);
-
-        if (roomDetailByName != null)
+        try
         {
-            // room with that name already exists
-            return;
+    // we can access the variables through the model
+            var roomDetailByName = await _HotelRoomRepository.IsRoomUnique(HotelRoomModel.Name, HotelRoomModel.Id);
+            if (roomDetailByName != null)
+            {
+    // room with that name already exists
+                await _JsRuntime.ToastrError("Room with the name already exists");
+                return;
+            }
+
+            if (HotelRoomModel.Id != 0 && Title == "Update")
+            {
+    // update  
+                var updateRoomResult = await _HotelRoomRepository.UpdateHotelRoom(HotelRoomModel.Id, HotelRoomModel);
+                await _JsRuntime.ToastrSuccess("Hotel Room Updated Successfully");
+            }
+            else
+            {
+    // create
+                var createdResult = await _HotelRoomRepository.CreateHotelRoom(HotelRoomModel);
+                await _JsRuntime.ToastrSuccess("Hotel Room Created Successfully");
+            }
+        }
+        catch (Exception e)
+        {
+    // log exceptions
         }
 
-        var createdResult = await _HotelRoomRepository.CreateHotelRoom(HotelRoomModel);
-        
-        // Navigate back to the index page
+    // Navigate back to the index page
         _NavigationManager.NavigateTo("hotel-room");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime _JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHotelRoomRepository _HotelRoomRepository { get; set; }
     }
